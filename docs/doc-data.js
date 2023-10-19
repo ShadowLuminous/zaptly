@@ -1048,7 +1048,7 @@ var docData = [
 
     &lt;div class="info-box-content"&gt;
         &lt;h4&gt;FREE SHIPPING &amp; RETURN&lt;/h4&gt;
-        &lt;p class="text-body"&gt;Free shipping on all orders over $99.&lt;/p&gt;
+        &lt;p class="text-body"&gt;Free shipping on all orders over R299.&lt;/p&gt;
     &lt;/div&gt;&lt;!-- End .info-box-content --&gt;
 &lt;/div&gt;&lt;!-- End .info-box --&gt;</samp>
                         `
