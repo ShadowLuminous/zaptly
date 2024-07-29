@@ -12,13 +12,21 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #ee4336, #ffffff);
+            background: linear-gradient(270deg, #ee4336, #ffffff, #ee4336, #ffffff);
+            background-size: 800% 800%;
+            animation: gradientFlow 15s ease infinite;
             color: #333;
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .container {
             text-align: center;
             background: rgba(255, 255, 255, 1);
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 20px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
             max-width: 500px;
             width: 90%;
@@ -29,15 +37,136 @@
             height: auto;
             max-width: 400px;
         }
+        .qr-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background: #ee4336;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .qr-btn:hover {
+            background: #cc392e;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .qr-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .qr-popup img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+        .qr-popup .close-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ee4336;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: bounceIn 0.5s;
+        }
+        .qr-popup .close-btn:hover {
+            background: #cc392e;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.3, .3, .3);
+                -ms-transform: scale3d(.3, .3, .3);
+                transform: scale3d(.3, .3, .3);
+            }
+            20% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                -ms-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            40% {
+                -webkit-transform: scale3d(.9, .9, .9);
+                -ms-transform: scale3d(.9, .9, .9);
+                transform: scale3d(.9, .9, .9);
+            }
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                -ms-transform: scale3d(1.03, 1.03, 1.03);
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+            80% {
+                -webkit-transform: scale3d(.97, .97, .97);
+                -ms-transform: scale3d(.97, .97, .97);
+                transform: scale3d(.97, .97, .97);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: scale3d(1, 1, 1);
+                -ms-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="card.png" alt="Placeholder Image" class="responsive-image">
+        <img src="card.png" class="responsive-image">
+        <button class="qr-btn" onclick="showQRCode()">QR Code</button>
     </div>
+    <div class="qr-popup" id="qrPopup">
+        <img src="qrcode.png">
+        <button class="close-btn" onclick="hideQRCode()">Close</button>
+    </div>
+
+    <script>
+        function showQRCode() {
+            const qrPopup = document.getElementById('qrPopup');
+            qrPopup.style.display = 'flex';
+            qrPopup.style.animation = 'fadeIn 0.5s ease-out';
+        }
+
+        function hideQRCode() {
+            const qrPopup = document.getElementById('qrPopup');
+            qrPopup.style.animation = 'fadeOut 0.5s ease-out';
+            setTimeout(() => {
+                qrPopup.style.display = 'none';
+            }, 500);
+        }
+    </script>
 </body>
 </html>
