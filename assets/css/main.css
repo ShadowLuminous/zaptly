@@ -366,12 +366,12 @@ article.modal {
 /* Header */
 #header {
   position: relative;
-  margin: 6em 0 2em 0;
-  padding-bottom: 8em;
+  margin: 4em 0 2em 0;
+  padding-bottom: 2em;
   cursor: default; }
   #header .logo a {
     display: inline-block;
-    background: #e7746f;
+    background: #f04536;
     color: #fff;
     border-radius: 4px;
     padding: 0.55em 0.6em;
