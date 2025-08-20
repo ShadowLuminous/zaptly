@@ -48,12 +48,13 @@
       font-weight: bold;
       text-decoration: none;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
       z-index: 1;
     }
 
     .demo-label:hover {
       background-color: #FFC107;
+      transform: scale(1.05);
     }
 
     h1 {
@@ -84,11 +85,12 @@
       color: white;
       font-weight: bold;
       background: rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
+      transition: all 0.3s ease, transform 0.2s ease;
     }
 
     .share-button:hover {
       background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
     }
 
     .share-button i {
@@ -99,7 +101,7 @@
       margin-top: 20px;
     }
 
-    #a2hs-popup {
+    #a2hs-popup, #how-to-share-popup, #qr-popup {
       position: fixed;
       bottom: 100px;
       left: 50%;
@@ -117,17 +119,11 @@
     }
 
     @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translate(-50%, 30px);
-      }
-      to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-      }
+      from { opacity: 0; transform: translate(-50%, 30px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
     }
 
-    #a2hs-popup button {
+    #a2hs-popup button, #how-to-share-popup button, #qr-popup button {
       margin-top: 10px;
       background: #333;
       color: white;
@@ -135,6 +131,12 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+    }
+
+    .qr-image {
+      margin-top: 10px;
+      width: 120px;
+      height: 120px;
     }
   </style>
 </head>
@@ -149,11 +151,11 @@
     <p><b>Choose the department you’d like to view staff members from</b></p>
 
     <ul id="share-links">
-      <li><a class="share-button" href="https://demo-link.com/finance"><span>Finance</span><i class="fas fa-arrow-right"></i></a></li>
-      <li><a class="share-button" href="https://demo-link.com/management"><span>Management</span><i class="fas fa-arrow-right"></i></a></li>
-      <li><a class="share-button" href="https://demo-link.com/software"><span>Software/IT</span><i class="fas fa-arrow-right"></i></a></li>
-      <li><a class="share-button" href="https://demo-link.com/marketing"><span>Marketing</span><i class="fas fa-arrow-right"></i></a></li>
-      <li><a class="share-button" href="https://demo-link.com/hr"><span>Human Resources</span><i class="fas fa-arrow-right"></i></a></li>
+      <li><a class="share-button" href="https://zaptly.co.za/linkdirect"><span>Finance</span><i class="fas fa-arrow-right"></i></a></li>
+      <li><a class="share-button" href="https://zaptly.co.za/linkdirect"><span>Management</span><i class="fas fa-arrow-right"></i></a></li>
+      <li><a class="share-button" href="https://zaptly.co.za/linkdirect"><span>Software/IT</span><i class="fas fa-arrow-right"></i></a></li>
+      <li><a class="share-button" href="https://zaptly.co.za/linkdirect"><span>Marketing</span><i class="fas fa-arrow-right"></i></a></li>
+      <li><a class="share-button" href="https://zaptly.co.za/linkdirect"><span>Human Resources</span><i class="fas fa-arrow-right"></i></a></li>
     </ul>
 
     <hr>
@@ -162,15 +164,34 @@
       <a class="share-button" href="#" onclick="shareSite()"><i class="fas fa-share-alt"></i><span>Share</span></a>
       <br>
       <a class="share-button" href="#" onclick="showInstallPopup()"><i class="fas fa-plus-circle"></i><span>Add to Home Screen</span></a>
+      <br>
+      <a class="share-button" href="#" onclick="showHowToShare()"><i class="fas fa-info-circle"></i><span>How to Share</span></a>
+      <br>
+      <a class="share-button" href="#" onclick="showQRPopup()"><i class="fas fa-qrcode"></i><span>QR Code</span></a>
     </div>
   </div>
 
+  <!-- Popups -->
   <div id="a2hs-popup">
     <strong>Add to Home Screen</strong>
     <p style="font-size: 14px; margin-top: 8px;">
-      Tap <b>Share</b> then <b>"Add to Home Screen"</b><br> from your browser menu.
+      Tap <b>Share</b> then <b>"Add to Home Screen"</b><br> from your browser menu
     </p>
-    <button onclick="hidePopup()">Close</button>
+    <button onclick="hidePopup('a2hs-popup')">Close</button>
+  </div>
+
+  <div id="how-to-share-popup">
+    <strong>How to Share</strong>
+    <p style="font-size: 14px; margin-top: 8px;">
+      Click the <b>Share</b> button and choose your preferred method to share the page
+    </p>
+    <button onclick="hidePopup('how-to-share-popup')">Close</button>
+  </div>
+
+  <div id="qr-popup">
+    <strong>QR Code</strong><br>
+    <img src="qrcode.png" alt="QR Code" class="qr-image"><br>
+    <button onclick="hidePopup('qr-popup')">Close</button>
   </div>
 
   <script>
@@ -186,13 +207,10 @@
       }
     }
 
-    function showInstallPopup() {
-      document.getElementById('a2hs-popup').style.display = 'block';
-    }
-
-    function hidePopup() {
-      document.getElementById('a2hs-popup').style.display = 'none';
-    }
+    function showInstallPopup() { document.getElementById('a2hs-popup').style.display = 'block'; }
+    function showHowToShare() { document.getElementById('how-to-share-popup').style.display = 'block'; }
+    function showQRPopup() { document.getElementById('qr-popup').style.display = 'block'; }
+    function hidePopup(id) { document.getElementById(id).style.display = 'none'; }
   </script>
 </body>
 </html>
