@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkDemo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    html, body {
+      min-height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.5s ease;
+      background: linear-gradient(to top right, #084c41, #084c41);
+    }
+
+    body.dark-mode {
+      background: linear-gradient(to top right, #333, #000);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    .profile-pic {
+      border: 3px solid white;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* DEMO label */
+    .profile-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .demo-label {
+      position: absolute;
+      bottom: 10px;
+      right: -10px;
+      background-color: #FFD700;
+      color: black;
+      padding: 6px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      z-index: 1;
+    }
+
+    .demo-label:hover {
+      background-color: #FFC107;
+    }
+
+    h1 {
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    .share-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border: 2px solid white;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .share-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .share-button i {
+      margin-left: 10px;
+    }
+
+    .actions {
+      margin-top: 20px;
+    }
+
+    /* Toggle Switch */
+    .toggle-switch {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: white;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #2D6FF7;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: white;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+      background-color: #333;
+    }
+
+    /* Popup */
+    #a2hs-popup {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      color: black;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 999;
+      display: none;
+      animation: slideUp 0.5s ease;
+      width: 300px;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    #a2hs-popup button {
+      margin-top: 10px;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Wrapped profile pic and label -->
+    <div class="profile-wrapper">
+      <img src="etc/Yastr.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+    
+    <h1>Yastr Pillay</h1>
+    <p><b>Passionate artist and animator with formal training in digital art and both 2D and 3D animation via Bachelor of Arts at SAE Institute, Cape Town</b></p>
+
+    <!-- Toggle Mode Switch -->
+    <!-- <div class="toggle-switch">
+      <label class="switch">
+        <input type="checkbox" id="modeToggle" onchange="toggleMode()">
+        <span class="slider"></span>
+      </label>
+    </div> -->
+
+    <ul id="share-links">
+      <li><a class="share-button" href="etc/YastrCV.pdf"><i class="far fa-folder"></i><span>CV</span></a></li>
+      <li><a class="share-button" href="https://drive.google.com/drive/folders/1Viaxk-A8O417M35lNVOe0IheBziU1MwT?usp=drive_link"><i class="far fa-folder"></i><span>Portfolio</span></a></li>
+      <li><a class="share-button" href="mailto:yastrpillay712@gmail.com"><i class="far fa-envelope"></i><span>Email</span></a></li>
+      <li><a class="share-button" href=""https://wa.me/27838003091" target="_blank""><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a></li>
+      <li><a class="share-button" href="https://www.instagram.com/themainyastrsa?igsh=cTAzM2dyM2FydzZx"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+      <li><a class="share-button" href="http://www.linkedin.com/in/yastr-pillay-b682a3338"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>
+    </ul>
+
+    <hr>
+
+    <div class="actions">
+      <a class="share-button" href="#" onclick="shareSite()"><i class="fas fa-share-alt"></i><span>Share</span></a>
+      <br>
+      <a class="share-button" href="#" onclick="showInstallPopup()"><i class="fas fa-plus-circle"></i><span>Add to Home Screen</span></a>
+    </div>
+  </div>
+
+  <!-- A2HS Animated Popup -->
+  <div id="a2hs-popup">
+    <strong>Add to Home Screen</strong>
+    <p style="font-size: 14px; margin-top: 8px;">
+      Tap <b>Share</b> then <b>"Add to Home Screen"</b><br> from your browser menu.
+    </p>
+    <button onclick="hidePopup()">Close</button>
+  </div>
+
+  <script>
+    let darkMode = false;
+    const links = document.querySelectorAll('#share-links li a span');
+
+    function toggleMode() {
+      darkMode = !darkMode;
+      document.body.classList.toggle("dark-mode", darkMode);
+
+      const labelsLight = ['Email', 'WhatsApp', 'TikTok', 'Instagram', 'Facebook'];
+      const labelsDark = ['Email-1', 'WhatsApp-1', 'TikTok-1', 'Instagram-1', 'Facebook-1'];
+
+      links.forEach((span, index) => {
+        span.textContent = darkMode ? labelsDark[index] : labelsLight[index];
+      });
+    }
+
+    function shareSite() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Check out this profile!',
+          text: 'A single shareable link to all platforms',
+          url: window.location.href
+        }).catch(console.error);
+      } else {
+        alert("Sharing is not supported on this browser.");
+      }
+    }
+
+    // Show Popup for Add to Home Screen
+    function showInstallPopup() {
+      document.getElementById('a2hs-popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('a2hs-popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
