@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halal Certificate</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff0000, #ff6666);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        img {
+            max-width: 90%;
+            max-height: 80%;
+            object-fit: contain;
+            animation: zoomIn 1.2s ease-in-out;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(135deg, #28a745, #218838);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #218838, #1e7e34);
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="halal.jpg" alt="Displayed Image">
+    <button onclick="goHome()">Go Back to Home</button>
+
+    <script>
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

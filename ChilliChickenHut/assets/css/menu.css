@@ -1,0 +1,191 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menu-block {
+    width: 30%; /* Default width for desktop */
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-block.speciala {
+    background-color: rgb(255, 196, 0);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.menu-block.specialb {
+    background-color: orangered;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.menu-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px red; }
+    50% { box-shadow: 0 0 25px yellow; }
+    100% { box-shadow: 0 0 15px red; }
+}
+
+.menu-featured-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Slanted black gradient background behind the menu titles */
+.menu-title, .sale-menu-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Set title text color to white */
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1; /* Ensure the title is on top */
+    padding: 10px;
+}
+
+/* Slanted black gradient background */
+.menu-title::before, .sale-menu-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgb(255, 0, 0));
+    background: linear-gradient(45deg, rgb(0, 175, 0), orangered);
+    background: rgb(0, 175, 0);
+/*     background: yellowgreen;
+    background: yellow;
+    background: orangered;
+    background: #f3a24b; */
+    z-index: -1; /* Ensure the background stays behind the text */
+    transform: skewX(-15deg); /* Adds the slanted effect */
+    border-radius: 10px; /* Slight rounding for a smoother look */
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.sale-menu-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    animation: jump 2s infinite ease-in-out; /* Add jumping animation */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sale-item-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.item-title {
+    font-size: 26px;
+    font-weight: bold;
+        color: black;
+}
+
+.item-description {
+    font-size: 16px;
+    color: #555;
+}
+
+.menu-item-description {
+    color: white; /* Change from grey to white */
+    font-size: 16px;
+    text-align: left;
+}
+
+.item-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.sale-item-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-item-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* Keyframe for jumping motion */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0); /* Starting and ending position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px at the peak of the jump */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu-block {
+        width: 90%; /* Adjust width to make it look centered on mobile */
+        margin: 10px auto; /* Center align blocks and add some vertical margin */
+    }
+
+    .menu-row {
+        flex-direction: column; /* Stack the rows vertically */
+        align-items: center; /* Center align the blocks */
+        width: 100%; /* Ensure the row takes full width */
+    }
+}

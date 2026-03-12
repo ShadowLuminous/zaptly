@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BV3NZTKNE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BV3NZTKNE9');
+</script>
+	<!-- Title -->
+	<title>Chilli Chicken Hut</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Zaptly">
+	<meta name="robots" content="">
+	<meta name="keywords" content="restaurant, restaurant website templates, restaurant template, food, restro, hotel, bootstrap 5, bootstrap, html, frontend, swigo, responsive template, shop, cart, menu, taste, blog, service, cook, customers, website, hungry, shop cart, fast food, table booking, website templates for restaurants, food website templates">
+	<meta name="description" content="Dive into the zest of Chilli Chicken Hut! Our menu offers bold flavours and fresh ingredients, perfect for any spicy craving. Experience the heat and heart in every bite.">
+	<meta property="og:title" content="Chilli Chicken Hut">
+	<meta property="og:description" content="Dive into the zest of Chilli Chicken Hut! Our menu offers bold flavours and fresh ingredients, perfect for any spicy craving. Experience the heat and heart in every bite.">
+	<meta property="og:image" content="social-image.png">
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+	<!-- Stylesheet -->
+    <link href="assets/vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+	
+	<!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/vendor/rangeslider/rangeslider.css">
+    <link rel="stylesheet" href="assets/vendor/switcher/switcher.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/menu.css">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+	<style>
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            min-width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            max-width: 80vw; /* Reduced size on desktop */
+            margin: auto;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            z-index: 10; /* Ensures buttons are above images */
+        }
+
+        .carousel-button.right {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Modal styling */
+        #imageModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure modal is above all other elements */
+        }
+
+        #imageModal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        #closeModal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="bg">
+	<!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-WK2PD4LX
+
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	
+	<!-- End Google Tag Manager (noscript) -->
+<div class="page-wraper">
+	
+	<!-- Header -->
+	<header class="site-header mo-left header header-transparent style-1">
+		<!-- Main Header -->
+		<div class="sticky-header main-bar-wraper navbar-expand-lg">
+			<div class="main-bar clearfix ">
+				<div class="container clearfix">
+					
+					<!-- Website Logo -->
+					<div class="logo-header mostion">
+						<a href="index.html" class="anim-logo"><img src="assets/images/logo - Copy.png" alt="/"></a>
+						<a href="index.html" class="anim-logo-white"><img src="assets/images/logo2 - Copy.png" alt="/"></a>
+					</div>
+					
+					<!-- Nav Toggle Button -->
+					<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					
+					
+					
+					<!-- Header Nav -->
+					<div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+						<div class="logo-header">
+							<a href="index.html" class="anim-logo"><img src="assets/images/logo - Copy.png" alt="/"></a>
+						</div>
+						<ul class="nav navbar-nav navbar white">
+							<li><a href="index.html"><b>Home</b></a></li>
+							<li><a href="menu.html"><b>Menu</b></a></li>
+							<li><a href="about-us.html"><b>About Us</b></a></li>
+							<li><a href="contact-us.html"><b>Contact Us</b></a></li>
+						</ul>
+						<div class="dz-social-icon">
+							<ul>
+								<li><a target="_blank" class="fab fa-facebook-f" href="#"></a></li>
+								<li><a target="_blank" class="fab fa-instagram" href="#"></a></li>
+								<li><a target="_blank" class="fab fa-tiktok" href="#"></a></li>
+								<li><a target="_blank" class="fab fa-whatsapp" href="#"></a></li>
+							</ul>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- Main Header End -->
+	</header>
+	<!-- Header -->
+	
+	
+	
+	<div class="page-content bg-white">
+		<!-- Banner  -->
+		<div class="dz-bnr-inr style-1 text-center bg-parallax" style="background-image:url('assets/images/banner/bnr1.jpg'); background-size:cover; background-position:center;">
+			<div class="container">
+				<div class="dz-bnr-inr-entry">
+					<h1>Our Menu</h1>
+				</div>
+			</div>
+		</div>
+		<!-- Banner End -->
+		
+		<!-- Our Menu-->
+		<section style="background-color: #f8f8f8;">
+			<div class="menu-container">
+				<!-- First Row - Perfect Plates Tab -->
+				<div class="menu-row">
+
+					<div class="menu-block speciala">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/CannyCombo.jpg" alt="Canny Combos Featured Image">
+							</div>
+						</div>
+						<h3 class="sale-menu-title">Canny Combos</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Ultimate Hunga Busta</div>
+								<div class="sale-item-description" style="color: black;">The perfect cure for hunger! 4 pieces of chicken, mayo bread, homefries, and 2 sodas. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="sale-item-price">99,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Masala Chicken Curry with Pap Meal</div>
+								<div class="sale-item-description" style="color: black;">Savour the bold flavours of our masala curry, served with smooth, comforting pap. And a soda. <b><i> Spice Level = 🌶️🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="sale-item-price">83,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Cowboy Skillet Chicken Meal</div>
+								<div class="sale-item-description" style="color: black;">Buttermilk-brined, skillet-fried chicken served with mayo-slathered white bread—a taste of the wild west. And a cold soda! <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="sale-item-price">51,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Kung Fu Kickin' Combo Meal</div>
+								<div class="sale-item-description" style="color: black;">Our spicy Kung Fu chicken, plus a side of fries. A meal so good, it'll fight your hunger! And a fizzy quencher.</div>
+							</div>
+							<div class="sale-item-price">47,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Ultimate Toastie Combo Meal</div>
+								<div class="sale-item-description" style="color: black;">Pulled chicken toastie packed with your choice of flavour, served with our world-class spiced homefries, and a soda!</div>
+							</div>
+							<div class="sale-item-price">45,90</div>
+						</div>
+					</div>
+
+					<div class="menu-block specialb">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/PerfectPlates.jpg" alt="Perfect Plates Featured Image">
+							</div>
+						</div>
+						<h3 class="sale-menu-title">Perfect Plates</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Smash Bites</div>
+								<div class="sale-item-description">Golden, crispy potato pap bites stuffed with melty American cheese—one pop, and you're hooked!</div>
+							</div>
+							<div class="sale-item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Kung Fu Kickin' Combo</div>
+								<div class="sale-item-description">Our spicy Kung Fu chicken, plus a side of fries. A meal so good, it'll fight your hunger!</div>
+							</div>
+							<div class="sale-item-price">35,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Cowboy Skillet Chicken</div>
+								<div class="sale-item-description">Buttermilk-brined, skillet-fried chicken served with mayo-slathered white bread—a taste of the wild west. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="sale-item-price">38,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Ultimate Hunga Busta</div>
+								<div class="sale-item-description">The perfect cure for hunger! 4 pieces of chicken, mayo bread, homefries, and 2 sodas. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="sale-item-price">99,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="sale-item-title">Masala Chicken Curry with Pap</div>
+								<div class="sale-item-description">Savour the bold flavours of our masala curry, served with smooth, comforting pap. <b><i> Spice Level = 🌶️🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="sale-item-price">73,90</div>
+						</div>
+					</div>
+					
+		
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/Bites&Delights.jpg" alt="Bites & Delights Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Bites & Delights</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Smash Bites</div>
+								<div class="item-description">Golden, crispy potato pap bites stuffed with melty American cheese—one pop, and you're hooked!</div>
+							</div>
+							<div class="item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Pap Bites</div>
+								<div class="item-description">Bite-sized potato pap pops with savoury chicken polony bits, fried to perfection.</div>
+							</div>
+							<div class="item-price">18,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Smash Toastie</div>
+								<div class="item-description">Pulled chicken toasted to crispy perfection, with your choice of bold, mouthwatering flavours.</div>
+							</div>
+							<div class="item-price">23,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Ultimate Toastie Combo</div>
+								<div class="item-description">Pulled chicken toastie packed with your choice of flavour, served with our world-class homefries.</div>
+							</div>
+							<div class="item-price">33,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Top of the Pops</div>
+								<div class="item-description">Pulled chicken toastie with your flavour choice, plus our irresistible cheesy smash bites.</div>
+							</div>
+							<div class="item-price">33,90</div>
+						</div>
+					</div>
+					
+					
+		
+					
+					
+				</div>
+		
+				<!-- Second Row - Additional Tabs -->
+				<div class="menu-row">
+
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/MagMagic.jpg" alt="Mag Magic Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Mag Magic</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Cheezy Chick Mag</div>
+								<div class="item-description">Pulled chicken and American cheese stuffed inside a fluffy, golden magwinya/vetkoek.</div>
+							</div>
+							<div class="item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Cheezy Chick Mag & Fries</div>
+								<div class="item-description">The ultimate combo of cheesy pulled chicken in a magwinya with a side of our signature homefries.</div>
+							</div>
+							<div class="item-price">26,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Chick Strips Mag</div>
+								<div class="item-description">Sautéed chicken strips and onions, packed with flavour, inside a golden magwinya.</div>
+							</div>
+							<div class="item-price">21,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Chick Strips Mag & Fries</div>
+								<div class="item-description">Our tasty chicken strips magwinya with a side of crispy homefries for a perfect match.</div>
+							</div>
+							<div class="item-price">31,90</div>
+						</div>
+					</div>
+					
+
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/ChickenStripSensation.jpg" alt="Chicken Strip Sensations Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Chicken Strip Sensations</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Spicy Chicken Strips & Fries (Medium Meal)</div>
+								<div class="item-description">Sautéed chicken strips in your favourite flavour, served with our legendary homefries.</div>
+							</div>
+							<div class="item-price">38,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Spicy Chicken Strips & Fries (Large Meal)</div>
+								<div class="item-description">Sautéed chicken strips in your favourite flavour, served with our legendary homefries.</div>
+							</div>
+							<div class="item-price">47,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Chicken Strips & Savoury Rice</div>
+								<div class="item-description">Juicy chicken strips and onions with our seasoned, savoury rice—a match made in heaven.</div>
+							</div>
+							<div class="item-price">56,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Chicken Strips & Creamy Pap</div>
+								<div class="item-description">Tender chicken strips on a bed of Durban’s finest pap, a true South African classic.</div>
+							</div>
+							<div class="item-price">41,90</div>
+						</div>
+					</div>					
+		
+						<div class="menu-block">
+							<div class="menu-featured-image">
+								<div class="carousel">
+									<img src="assets/images/menubanners/CrispyChickenFavourites.jpg" alt="Crispy Chicken Favourites Featured Image">
+								</div>
+							</div>
+							<h3 class="menu-title">Crispy Chicken Favourites</h3>
+							<div class="menu-item">
+								<div class="item-text">
+									<div class="item-title">Crispy Chicken Schnitz</div>
+									<div class="item-description">Golden, crispy breaded chicken breast, perfectly fried for a protein-packed snack. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+								</div>
+								<div class="item-price">21,90</div>
+							</div>
+							<div class="menu-item-divider"></div>
+							<div class="menu-item">
+								<div class="item-text">
+									<div class="item-title">Crispy Schnitz & Fries</div>
+									<div class="item-description">Juicy chicken schnitzel paired with golden, crispy homefries for the ultimate bite. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+								</div>
+								<div class="item-price">31,90</div>
+							</div>
+						</div>
+						
+						
+				</div>
+
+				<!-- Third Row - Additional Tabs -->
+				<div class="menu-row">
+
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/KungFuKombos.jpg" alt="Kung Fu Combos Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Kung Fu Combos</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Kung Fu Kickin' Chicken</div>
+								<div class="item-description">Crispy bone-in chicken bites tossed in your flavour of sauce—a knockout combo!</div>
+							</div>
+							<div class="item-price">25,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Kung Fu Kickin' Double</div>
+								<div class="item-description">A double K.O. of crispy bone-in chicken bites tossed in your flavour of sauce!</div>
+							</div>
+							<div class="item-price">44,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Kung Fu Kickin' Combo</div>
+								<div class="item-description">Our spicy Kung Fu chicken, plus a side of fries. A meal so good, it'll fight your hunger!</div>
+							</div>
+							<div class="item-price">35,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Kung Fu Roundhouse</div>
+								<div class="item-description">Double our Kung Fu chicken, and twice the fries. A meal so good, it’s a TKO!</div>
+							</div>
+							<div class="item-price">64,90</div>
+						</div>
+					</div>
+
+
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/SkilletSpecialties.jpg" alt="Skillet Specialties Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Skillet Specialties</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Cowboy Skillet Chicken</div>
+								<div class="item-description">Buttermilk-brined, skillet-fried chicken served with mayo-slathered white bread—a taste of the wild west. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">38,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Skillet Chicken & Pap Perfection</div>
+								<div class="item-description">Tender skillet-fried chicken, served with Durban’s best creamy pap for a hearty feast. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">35,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Southern Skillet & Fries</div>
+								<div class="item-description">Crispy, southern-style skillet chicken paired with our famous homefries. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">42,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Lovebird Skillet</div>
+								<div class="item-description">Share the love with 4 pieces of skillet-fried chicken and our signature homefries. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">67,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Buddy’s Skillet Combo</div>
+								<div class="item-description">A shareable feast! 4 pieces of skillet-fried chicken and 4 mayo-slathered slices of bread. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">69,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Hangry Buster Skillet</div>
+								<div class="item-description">Fight your hunger with 4 juicy pieces of skillet chicken, mayo bread, and crispy homefries. <b><i> Spice Level = 🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">79,90</div>
+						</div>
+					</div>
+					
+		
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/GoldenChickenFry.jpg" alt="Golden Chicken Classics Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Golden Chicken Classics</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Golden Chicken Fry (No Gravy)</div>
+								<div class="item-description">Juicy, golden-fried chicken coated in our special masala spice mix. It’s savoury and packs a flavour punch! <b><i> Spice Level = 🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">39,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Golden Chicken Fry & Pap</div>
+								<div class="item-description">A perfect match of golden masala chicken and soft, creamy pap to satisfy your hunger. <b><i> Spice Level = 🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">43,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Golden Chicken Fry with Chips</div>
+								<div class="item-description">Our amazing masala chicken served with our famous fries. Savoury meets crunch for the ultimate meal. <b><i> Spice Level = 🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">51,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Golden Chicken Fry with Savoury Rice</div>
+								<div class="item-description">Tender masala-fried chicken paired with fragrant, seasoned basmati rice. A delicious, flavourful duo. <b><i> Spice Level = 🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">58,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Spicy Masala Chicken Curry (With Gravy)</div>
+								<div class="item-description">Tender chicken simmered in a rich, spicy masala gravy. Perfectly balanced with warmth and depth. <b><i> Spice Level = 🌶️🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">71,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Masala Chicken Curry with Pap</div>
+								<div class="item-description">Savour the bold flavours of our masala curry, served with smooth, comforting pap. <b><i> Spice Level = 🌶️🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">73,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Masala Chicken Curry with Chips</div>
+								<div class="item-description">Our signature spicy chicken curry, served with crispy fries for a twist on a classic. <b><i> Spice Level = 🌶️🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">81,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Masala Chicken Curry with Rice</div>
+								<div class="item-description">A flavourful feast! Spicy masala chicken curry served with fragrant basmati rice for a true comfort meal. <b><i> Spice Level = 🌶️🌶️🌶️🌶️</i></b></div>
+							</div>
+							<div class="item-price">89,90</div>
+						</div>
+					</div>
+				
+					
+				</div>
+
+				<!-- Fourth Row - Additional Tabs -->
+				<div class="menu-row">
+
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/Sides&Fries.jpg" alt="Sides & Fries Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Sides & Fries</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Creamy Pap</div>
+								<div class="item-description">Soft and fluffy pap, perfect for soaking up sauces or accompanying your favourite mains.</div>
+							</div>
+							<div class="item-price">26,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Savoury Basmati Rice</div>
+								<div class="item-description">Aromatic basmati rice, lightly seasoned to complement any meal with its fragrant and fluffy texture.</div>
+							</div>
+							<div class="item-price">24,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Roti</div>
+								<div class="item-description">Two soft, warm rotis—perfect for scooping up curry or enjoying as a tasty side.</div>
+							</div>
+							<div class="item-price">26,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Dancing Spud Fries</div>
+								<div class="item-description">Hand-cut, skin-on cubed fries dusted with our secret dancing spice—crispy, flavourful, and fun!</div>
+							</div>
+							<div class="item-price">21,90</div>
+						</div>
+					</div>
+					
+					<div class="menu-block">
+						<div class="menu-featured-image">
+							<div class="carousel">
+								<img src="assets/images/menubanners/Quenchers.jpg" alt="Quenchers Featured Image">
+							</div>
+						</div>
+						<h3 class="menu-title">Quenchers</h3>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Pepsi</div>
+							</div>
+							<div class="item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Pepsi Max</div>
+							</div>
+							<div class="item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Mirinda</div>
+							</div>
+							<div class="item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Mountain Dew</div>
+							</div>
+							<div class="item-price">19,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Still Water</div>
+							</div>
+							<div class="item-price">14,90</div>
+						</div>
+						<div class="menu-item-divider"></div>
+						<div class="menu-item">
+							<div class="item-text">
+								<div class="item-title">Sparkling Water</div>
+							</div>
+							<div class="item-price">14,90</div>
+						</div>
+					</div>
+					
+			</div>
+
+    <!-- <div class="carousel-container" id="food-gallery">
+        <div class="carousel-slide" id="carousel-slide">
+            // Images will be dynamically generated here 
+        </div>
+        <a class="carousel-button left" id="prev">&#10094;</a>
+        <a class="carousel-button right" id="next">&#10095;</a>
+    </div>
+
+    // Modal for full-size image view 
+    <div id="imageModal">
+        <span id="closeModal">&times;</span>
+        <img id="fullImage">
+    </div>
+
+    <script>
+        const totalImages = 25; // Adjusted for 25 images
+        const slideContainer = document.getElementById('carousel-slide');
+
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement('img');
+            img.src = `assets/images/menu/2024-05-14 - Chilli Chicken Hut-${String(i).padStart(2, '0')}.jpg`;
+            img.alt = `Image ${i}`;
+            img.addEventListener('click', () => {
+                document.getElementById('fullImage').src = img.src;
+                document.getElementById('imageModal').style.display = 'flex';
+            });
+            slideContainer.appendChild(img);
+        }
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index >= totalImages) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalImages - 1;
+            } else {
+                currentIndex = index;
+            }
+            slideContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+
+        document.getElementById('prev').addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+        });
+
+        window.addEventListener('resize', () => {
+            showSlide(currentIndex);
+        });
+
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('imageModal').style.display = 'none';
+        });
+
+        // Optional: Automatic slideshow
+        setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 3000); // Change image every 3 seconds
+
+        showSlide(0);
+    </script> -->
+
+<!-- Advertisement Box -->
+<section class="content-inner overflow-hidden pb-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-12 m-b30 wow fadeInUp" data-wow-delay="0.2s">
+				<div class="adv-box style-1" style="background-image:url('assets/images/adv/pic2.png'); background-repeat:no-repeat; background-position:center; background-size:cover;">
+					<div class="adv-content">
+						<h2 class="animated-image" style="color: white;">🔥HOT DEALS🔥</h2>
+						<!-- <img class="animated-image" src="Combo-Text.png" alt="Rugby Ball"> -->
+						<!-- <h6 style="color: white;">Masala Chicken Curry<br><i>with</i> Pap & Pepsi</h6> -->
+					</div>
+					<div class="adv-media">
+						<img class="main-media" src="assets/images/adv/pic1.png" alt="/">
+						<!-- <div class="item-media offer-label">
+							<img src="assets/images/adv/label.png" alt="/">
+							<span class=""><center>ONLY R80</center></span>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 m-b30 wow fadeInUp" data-wow-delay="0.4s">
+						<div class="adv-box style-2">
+							<div class="adv-media">
+								<img src="assets/images/adv/pic3.png" alt="/">
+							</div>
+							<div class="adv-content">
+								<span class="special text-white">FIND US ON</span>
+								<h4 class="title text-white">MRD</h4>
+								<!-- <a target="_blank" href="https://order.mrdfood.com/order/restaurant/29351/menu/2425781" class="btn btn-white btn-hover-3"><span class="btn-text" data-text="Order Now"><b>Order Now</b></span></a> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 m-b30 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="adv-box style-2">
+							<div class="adv-media">
+								<img src="assets/images/adv/pic5.png" alt="/">
+							</div>
+							<div class="adv-content">
+								<span class="special text-white">FIND US ON UBER</span>
+								<h4 class="title text-white">EATS</h4>
+								<!-- <a target="_blank" href="https://www.order.store/store/chilli-chicken-hut/HHCcC97gXJ28lVL9WMkZMQ" class="btn btn-white btn-hover-3"><span class="btn-text" data-text="Order Now"><b>Order Now</b></span></a> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="adv-box style-4" style="background-image:url('assets/images/background/pic16.png'); background-repeat:no-repeat; background-size:cover;">
+							<div class="adv-media">
+								<img src="assets/images/adv/pic4.png" alt="/">
+							</div>
+							<div class="adv-content">
+								<span class="special text-white">ORDER FOR COLLECTION ON</span>
+								<h4 class="price">WhatsApp</h4>
+							</div>
+							<a target="_blank" href="#" class="btn btn-white btn-hover-3"><span class="btn-text" data-text="Order Now"><b>Order Now</b></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Advertisement Box -->
+
+		</section>
+		<!-- Our Menu-->
+		
+	</div>
+	<!--Footer-->
+	<footer class="site-footer style-3" id="footer">
+		<div class="footer-bg-wrapper">
+			<div class="container">
+				<div class="footer-top">
+					<div class="footer-subscribe-wrapper">
+						<div class="wrapper-inner">
+							<div class="row justify-content-between">
+								<div class="col mb-lg-0 m-b20 wow fadeInUp" data-wow-delay="0.2s">
+									<div class="footer-logo">
+										<center><a href="index.html" class="anim-logo">
+											<img src="assets/images/logo3 - Copy.png" alt="logo">
+										</a></center>
+									</div></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-6 text-md-start">
+							<h5 class="footer-title wow fadeInUp" data-wow-delay="0.2s">Help Center</h5>
+							<div class="footer-menu wow fadeInUp" data-wow-delay="0.4s">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="menu.html">Menu</a></li>
+									<li><a href="about-us.html">About Us</a></li>
+									<li><a href="contact-us.html">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-6 col-6 text-md-end">
+							<h5 class="footer-title wow fadeInUp" data-wow-delay="0.2s">Our Socials</h5>
+							<div class="footer-menu wow fadeInUp" data-wow-delay="0.4s">
+								<div>
+									<ul>
+										<li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/chillichickenhut/" style="font-size: 24px; color: red;"></a> Facebook</li>
+										<li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/chillichickenhuteats/" style="font-size: 24px; color: red;"></a> Instagram</li>
+										<li><a target="_blank" class="fab fa-tiktok" href="https://www.tiktok.com/@chillichickenhut" style="font-size: 24px; color: red;"></a> TikTok</li>
+										<li><a target="_blank" class="fab fa-whatsapp" href="#" style="font-size: 24px; color: red;"></a> WhatsApp</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Bottom Part -->
+			<div class="container">
+				<div class="footer-bottom">
+					<center><p><b>&copy; <script>document.write(new Date().getFullYear());</script> | Chilli Chicken Hut | All Rights Reserved</b></p></center>
+				</div>
+			</div>
+		</div>
+		<img class="bg1 dz-move" src="assets/images/background/pic5.png" alt="/">
+		<img class="bg2 dz-move" src="assets/images/background/pic6.png" alt="/">
+    </footer> 
+	
+	<div class="scroltop-progress scroltop-primary">
+		<svg width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+		</svg>
+	</div>
+	
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="assets/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script><!-- BOOTSTRAP SELEECT -->
+<script src="assets/vendor/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+<script src="assets/vendor/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="assets/vendor/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script><!-- OWL-CAROUSEL -->
+<script src="assets/js/dz.carousel.min.js"></script><!-- OWL-CAROUSEL -->
+<script src="assets/js/dz.ajax.js"></script><!-- AJAX -->
+<script src="assets/js/custom.min.js"></script><!-- CUSTOM JS -->
+<script src="assets/js/dznav-init.js"></script><!-- DZNAV INIT -->
+<script>
+	jQuery(document).ready(function(){
+		dzSettingsOptions.themeFullColor_value = 'color_3';
+		new dzSettings(dzSettingsOptions);
+	});
+	</script>
+</body>
+
+</html>
